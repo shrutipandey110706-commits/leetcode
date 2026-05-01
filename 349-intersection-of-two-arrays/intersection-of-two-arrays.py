@@ -5,10 +5,10 @@ class Solution(object):
         :type nums2: List[int]
         :rtype: List[int]
         """
-        result = []
+        # result = []
 
-        for num in nums1:
-            if num in nums2 and num not in result:
-                result.append(num)
-        return result        
-        
+        # for num in nums1:
+        #     if num in nums2 and num not in result:
+        #         result.append(num)
+        # return result        
+        return list(set(nums1)& set (nums2))
