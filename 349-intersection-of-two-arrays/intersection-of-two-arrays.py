@@ -11,4 +11,4 @@ class Solution(object):
         #     if num in nums2 and num not in result:
         #         result.append(num)
         # return result        
-        return list(set(nums1)& set (nums2))
+        return list(set(nums1) & set (nums2))
