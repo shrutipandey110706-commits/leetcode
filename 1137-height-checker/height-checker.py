@@ -11,4 +11,4 @@ class Solution(object):
             if heights[i] != expected[i]:
                 count+=1
 
-        return count
+        return count # students who's not standing their correct possion 
