@@ -1,0 +1,25 @@
+class Solution(object):
+
+    def minCostClimbingStairs(self, cost):
+        """
+        :type cost: List[int]
+        :rtype: int
+        """
+
+        # Cost to reach stair 0
+        first = cost[0]
+
+        # Cost to reach stair 1
+        second = cost[1]
+
+        # Start from stair 2
+        for i in range(2, len(cost)):
+
+            # Current stair cost +
+            # minimum cost from previous two stairs
+            current = cost[i] + min(first, second)
+
+            # Move values forward
+            first = second
+            second = current
+        return min(first, second)
