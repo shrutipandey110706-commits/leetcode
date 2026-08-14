@@ -1,0 +1,34 @@
+class Solution(object):
+    def largestAltitude(self, gain):
+        """
+        :type gain: List[int]
+        :rtype: int
+        """
+        # Biker starts at altitude 0
+        altitude= 0
+         # Starting altitude 0 is also the highest initially
+        highest=0
+        for g in gain:
+            # Update current altitude
+            altitude += g
+            # Store the maximum altitude reached so far
+            highest = max (highest,altitude)
+        return highest 
+
+
+
+"""
+Input:
+gain = [-5, 1, 5, 0, -7]
+
+Starting altitude = 0
+
+0 + (-5) = -5
+-5 + 1   = -4
+-4 + 5   = 1
+1 + 0    = 1
+1 + (-7) = -6
+
+Output:1
+"""           
+        
