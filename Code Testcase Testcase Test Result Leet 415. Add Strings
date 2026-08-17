@@ -1,0 +1,37 @@
+class Solution:
+    def addStrings(self, num1: str, num2: str) -> str:
+
+        # Start from the last digit of both strings
+        i = len(num1) - 1
+        j = len(num2) - 1
+
+        # Stores carry from the previous addition
+        carry = 0
+
+        # Store the result digits
+        result = []
+
+        # Continue while there are digits or carry left
+        while i >= 0 or j >= 0 or carry:
+
+            # Convert character into integer digit
+            # If no digit is available, use 0
+            digit1 = ord(num1[i]) - ord('0') if i >= 0 else 0
+            digit2 = ord(num2[j]) - ord('0') if j >= 0 else 0
+
+            # Add both digits and carry
+            total = digit1 + digit2 + carry
+
+            # Get the current digit
+            result.append(str(total % 10))
+
+            # Calculate carry for next addition
+            carry = total // 10
+
+            # Move to the previous digit
+            i -= 1
+            j -= 1
+
+        # Digits were added from right to left,
+        # so reverse them before returning
+        return ''.join(result[::-1])
