@@ -11,6 +11,7 @@
 <strong>Explanation:</strong> &quot;amanaplanacanalpanama&quot; is a palindrome.
 </pre>
 
+
 <p><strong class="example">Example 2:</strong></p>
 
 <pre>
